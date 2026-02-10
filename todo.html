@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: blue;
+        }
+        h2{
+            padding: 10px;
+        }
+        .container{
+            text-align: center;
+            display: block;
+            align-items: center;
+            background-color: white;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 75px auto;
+            width: 450px;
+            height: 150px;
+            border-radius: 4px;
+
+        }
+        button{
+            margin-left: 5px;
+            background-color: lightgreen;
+            border: none;
+            padding: 8px;
+            cursor: pointer;
+            border-radius: 2px;
+        }
+        input[type=text]{
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>My Todo List</h2>
+        <input type="text" id="todo" placeholder="Add a new todo...">
+        <button type="submit" id="submit">Add todo</button>
+        <ul id="list">
+
+        </ul>
+    </div>
+
+    <script>
+        document.getElementById('submit').addEventListener('click',function(){
+            var input=document.getElementById('todo').value;
+            if(input){
+                document.getElementById('list').innerHTML=input;
+            }
+
+        });
+    </script>
+</body>
+</html>
