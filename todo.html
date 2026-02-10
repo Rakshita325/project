@@ -51,10 +51,14 @@
         document.getElementById('submit').addEventListener('click',function(){
             var input=document.getElementById('todo').value;
             if(input){
-                document.getElementById('list').innerHTML=input;
+                var li=document.createElement('li');
+                li.textContent=input;
+                document.getElementById('list').appendChild(li); 
+                document.getElementById('todo').value = "";
             }
 
         });
     </script>
 </body>
+
 </html>
